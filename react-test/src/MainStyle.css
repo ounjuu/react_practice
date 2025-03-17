@@ -1,0 +1,11 @@
+.wrap-box {
+  margin-bottom: 40px;
+  .title {
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+  }
+
+  .content {
+    color: gray;
+  }
+}

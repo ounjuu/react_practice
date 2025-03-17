@@ -1,0 +1,11 @@
+.wrap {
+  width: 100%;
+}
+
+.box {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+}

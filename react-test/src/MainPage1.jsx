@@ -8,20 +8,29 @@ import Component5 from "./Component5";
 import Component6 from "./Component6";
 import Component7 from "./Component7";
 import { useState } from "react";
+
 const MainPage1 = () => {
-  const [number, setNumber] = useState(0);
-  const [hello, setHello] = useState("안녕하세요.");
-  const changeValue = (value) => {
-    return value;
-  };
+  // 과일 value 저장용
+  const [fruit, setFruit] = useState("apple");
+  const [back, setBack] = useState("red");
+  const [fontColor, setFontColor] = useState("white");
+  const [text, setText] = useState("");
+
   return (
     <>
-      <Component1 number={number} setNumber={setNumber} />
-      <Component2 hello={hello} setHello={setHello} />
-      <Component3 changeValue={changeValue} />
-      <Component4 />
-      <Component5 />
-      <Component6 />
+      <Component1 fruit={fruit} setFruit={setFruit} />
+      <Component2 back={back} setBack={setBack} />
+      <Component3 fontColor={fontColor} setFontColor={setFontColor} />
+      <Component4 text={text} setText={setText} />
+      <Component5 fruit={fruit} setFruit={setFruit} />
+      <Component6
+        back={back}
+        setBack={setBack}
+        fontColor={fontColor}
+        setFontColor={setFontColor}
+        text={text}
+        setText={setText}
+      />
       <Component7 />
     </>
   );

@@ -1,0 +1,37 @@
+.allLeftSize {
+  height: 80%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.BigImg {
+  width: 100%;
+  border: solid 2px black;
+  aspect-ratio: 1;
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.BigImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.imgBoxSize {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.imgBoxSize img {
+  aspect-ratio: 1/1;
+  border: solid 2px black;
+  width: 100px;
+  border-radius: 10px;
+}

@@ -1,0 +1,79 @@
+.starBox {
+  display: flex;
+  border-bottom: 3px black solid;
+  margin-top: 10px;
+  padding-bottom: 2px;
+}
+
+.inputAllBox {
+  display: flex;
+}
+
+.allRightBox {
+  width: 80%;
+  height: 80%;
+}
+
+.titleApple {
+  font-size: 28px;
+}
+
+.blueText {
+  color: rgb(73, 107, 255);
+  font-size: 12px;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+.redText {
+  color: rgb(255, 49, 49);
+  margin-top: 20px;
+  padding-bottom: 5px;
+  font-size: 15px;
+  border-bottom: 1px solid black;
+}
+
+.deliverText span {
+  color: green;
+}
+.deliverText {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 13px;
+}
+.quantityInputs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+.quantityButtons {
+  width: 10px;
+  height: 30px;
+  padding-right: 13px;
+  padding-left: 13px;
+}
+
+.quantityNum {
+  width: 10px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 13px;
+  padding-left: 13px;
+  box-sizing: border-box;
+}
+.selectBox select {
+  font-size: 13px;
+}
+
+.allPriceText {
+  font-size: 15px;
+  margin-top: 100px;
+}
+
+.allPriceText span {
+  font-size: 18px;
+  color: rgb(171, 2, 2);
+}

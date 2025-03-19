@@ -15,6 +15,8 @@ const CoupangMain = () => {
   ]);
   const [mainImage, setMainImage] = useState("/img/gray1.jpg");
   const [productName, setProductName] = useState("그레이");
+  const [productOption, setProductOption] = useState("220-225mm(36-37)");
+
   return (
     <div className="allWrap">
       <div className="topWrap">
@@ -24,6 +26,8 @@ const CoupangMain = () => {
           setMainImage={setMainImage}
           productName={productName}
           setProductName={setProductName}
+          productOption={productOption}
+          setProductOption={setProductOption}
         />
       </div>
 

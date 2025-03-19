@@ -1,0 +1,12 @@
+.allWrap {
+  max-width: 1280px;
+  background-color: red;
+  padding: 15px;
+}
+.bottomWrap {
+  background-color: aqua;
+}
+.topWrap {
+  display: flex;
+  justify-content: space-between;
+}

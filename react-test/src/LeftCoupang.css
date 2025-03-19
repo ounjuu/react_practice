@@ -1,0 +1,29 @@
+.LeftBox {
+  background-color: blue;
+  width: 49%;
+  display: flex;
+}
+.lineImages {
+  width: 20%;
+  background-color: aquamarine;
+  display: flex;
+  flex-direction: column;
+  /* align-items: end; */
+  padding-left: 18px;
+  box-sizing: border-box;
+}
+.bigImage {
+  width: 80%;
+  background-color: antiquewhite;
+}
+.bigImage img {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+}
+.lineImages img {
+  width: 100%;
+  height: auto;
+  max-width: 85px;
+  padding-bottom: 5px;
+}

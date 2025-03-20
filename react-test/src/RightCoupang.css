@@ -1,6 +1,7 @@
 .RightBox {
-  background-color: yellow;
   width: 49%;
+  padding-right: 15px;
+  box-sizing: border-box;
 }
 h2 {
   margin: 0;
@@ -8,6 +9,8 @@ h2 {
 }
 .smallImagesBox {
   display: flex;
+  padding: 20px 0px;
+  border-bottom: 1px solid rgb(206, 206, 206);
   div {
     width: 65px;
     height: 65px;
@@ -46,7 +49,12 @@ h2 {
 .blueText {
   color: rgb(48, 90, 255);
 }
-
+.grayText {
+  color: gray;
+}
+.redText {
+  color: red;
+}
 .fontSize12 {
   font-size: 12px;
 }
@@ -54,10 +62,84 @@ h2 {
 .fontSize15 {
   font-size: 15px;
 }
+.fontSize20 {
+  font-size: 20px;
+}
+.fontSize25 {
+  font-size: 25px;
+}
 
+.boldText {
+  font-weight: bold;
+}
+.greenText {
+  color: green;
+}
+.TextLine {
+  text-decoration: line-through;
+}
+.paddingTop5 {
+  padding-top: 5px;
+}
 /* 선 */
 .priceTitle {
   border-top: 1px solid rgb(172, 172, 172);
-  border-bottom: 1px solid rgb(172, 172, 172);
+  border-bottom: 1px solid rgb(206, 206, 206);
   padding: 10px 0px;
+  margin-top: 10px;
+}
+
+.productTitle h2 {
+  margin: 10px 0px;
+}
+
+.deliveryLine {
+  border-bottom: 1px solid rgb(206, 206, 206);
+  padding: 10px 0px;
+}
+
+.shopText {
+  border-bottom: 1px solid rgb(206, 206, 206);
+  padding: 20px 0px;
+}
+
+.sizeInputBox {
+  padding: 20px 0px;
+}
+
+.moneyTexts {
+  border-bottom: 1px solid rgb(206, 206, 206);
+  padding: 20px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.paymentText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0px;
+  img {
+    width: 15px;
+    height: 15px;
+    object-fit: contain;
+  }
+}
+/* 장바구니 버튼 */
+.inputs {
+  display: flex;
+  justify-content: space-between;
+}
+.custom-button {
+  width: 40%;
+  border-radius: 0;
+  padding: 20px 0px;
+  font-weight: bold;
+}
+
+.custom-Input {
+  width: 15%;
+  border-radius: 0;
+  padding: 5.5px 0px;
+  font-weight: bold;
 }

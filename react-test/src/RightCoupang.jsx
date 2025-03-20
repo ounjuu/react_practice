@@ -86,46 +86,60 @@ const RightCoupang = (props) => {
     <div className="RightBox fontSize15">
       <form onSubmit={cartFormik.handleSubmit}>
         <div className="blueText">곰돌이샵</div>
-        <div className="productTitle">
+        <div className="productTitle fontSize15">
           <h2>
             곰돌이샵 말랑말랑 귀여운 몽실 토끼 EVA 슬리퍼 발편한 쿠션 실내화
           </h2>
           <span className="blueText">
             <Rate defaultValue={4.5} allowHalf />
-            510개 상품평
+            &nbsp;510개 상품평
           </span>
         </div>
         <div className="priceTitle">
           <div>
-            <span>47%</span>
-            <span>16,900원</span>
+            <span>47%&nbsp;</span>
+            <span className="grayText TextLine">16,900원</span>
           </div>
           <div>
-            <span>9,900원</span>
-            <span>쿠팡판매가</span>
+            <span className="grayText boldText fontSize25">9,900원</span>
+            <span className="grayText">&nbsp;쿠팡판매가</span>
           </div>
           <div>
-            <span>8,910원</span>
-            <span>즉시할인가</span>
+            <span className="redText fontSize25 boldText">8,910원</span>
+            <span className="redText">&nbsp;즉시할인가</span>
           </div>
         </div>
-        <div>내일(목) 3/20 도착 보장 (22분 내 주문 시 / 서울⋅경기 기준)</div>
-        <div>
-          판매자: <span>곰돌이샵</span>
+        <div className="deliveryLine">
+          <div>
+            <span className="boldText">무료배송</span>&nbsp;(로켓배송 상품
+            19,800원 이상 구매 시){" "}
+          </div>
+          <div className="paddingTop5">
+            <span className="greenText fontSize15 boldText">내일(목) 3/20</span>
+            <span className="greenText">&nbsp;도착 보장</span> (22분 내 주문 시
+            / 서울⋅경기 기준)
+          </div>
         </div>
-        <div>
-          <div>신발사이즈(mm)</div>
-          <Select
-            defaultValue={productOption}
-            options={productOption}
-            dropdownStyle={{
-              fontSize: 12,
-            }}
-          />
+        <div className="shopText">
+          판매자: <span className="blueText">곰돌이샵</span>
+        </div>
+        <div className="sizeInputBox">
+          <div className="boldText">신발사이즈(mm)</div>
+          <div className="paddingTop5">
+            <Select
+              defaultValue={productOption}
+              options={productOption}
+              dropdownStyle={{
+                fontSize: 12,
+              }}
+            />
+          </div>
         </div>
         <div>
           <div>
-            <div>색상: {productName}</div>
+            <div>
+              <span className="boldText">색상:</span> {productName}
+            </div>
           </div>
           <div className="smallImagesBox">
             {Object.keys(productImages).map((image, index) => (
@@ -145,32 +159,40 @@ const RightCoupang = (props) => {
             ))}
           </div>
         </div>
-        <div>
-          <span>적립</span>
-          <span>최대 445원</span>
-          <span>쿠팡캐시 적립</span>
-          <span>· 쿠페이 머니 결제시</span>
-          <span>혜택보기</span>
+        <div className="moneyTexts fontSize15">
+          <div>
+            <span className="boldText">적립&nbsp;&nbsp;&nbsp;</span>
+            <span>최대 445원&nbsp;</span>
+            <span>쿠팡캐시 적립</span>
+            <span>· 쿠페이 머니 결제시&nbsp;</span>
+          </div>
+          <div>
+            <span className="boldText blueText">
+              혜택보기 <span className="arrow"> &gt; </span>
+            </span>
+          </div>
         </div>
-        <div>
-          <span>PC에서도 간편한 결제</span>
+        <div class="paymentText">
+          <span className="boldText">PC에서도 간편한 결제&nbsp;</span>
           <img src="/img/coumoney.png" alt="coumoney" />
-          <span>쿠페이머니</span> <img src="/img/coucard.png" alt="coucard" />
-          <span>카드</span> <img src="/img/coucard2.png" alt="coucount" />
+          <span>쿠페이머니&nbsp;</span>{" "}
+          <img src="/img/coucard.png" alt="coucard" />
+          <span>카드&nbsp;</span> <img src="/img/coucard2.png" alt="coucount" />
           <span>계좌이체</span>
         </div>
-        <div>
+        <div class="inputs">
           <InputNumber
             min={1}
             max={10}
             defaultValue={1}
-            style={{ borderRadius: 0 }}
+            className="custom-Input"
           />
-          <Button type="primary" style={{ borderRadius: 0 }}>
-            장바구니에 담기
+
+          <Button type="primary" ghost className="custom-button">
+            장바구니 담기
           </Button>
-          <Button type="primary" ghost style={{ borderRadius: 0 }}>
-            바로 구매
+          <Button type="primary" className="custom-button">
+            바로 구매 &gt;
           </Button>
         </div>
       </form>

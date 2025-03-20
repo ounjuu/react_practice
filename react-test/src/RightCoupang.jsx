@@ -7,6 +7,12 @@ import { notification } from "antd";
 
 const RightCoupang = (props) => {
   const {
+    price,
+    setPrice,
+    discountPrice,
+    setDiscountPrice,
+    quantity,
+    setQuantity,
     setSelectImage,
     setMainImage,
     productName,
@@ -82,6 +88,20 @@ const RightCoupang = (props) => {
       cartFormik.resetForm();
     },
   });
+
+  const formatPrice = (price) => {
+    return price.toLocaleString();
+  };
+
+  // 수량
+  const handleQuantity = (value) => {
+    setQuantity(value);
+  };
+
+  // 전제 가격 계산
+  const calculateTotalPrice = (price) => {
+    return price * quantity;
+  };
   return (
     <div className="RightBox fontSize15">
       <form onSubmit={cartFormik.handleSubmit}>
@@ -98,14 +118,20 @@ const RightCoupang = (props) => {
         <div className="priceTitle">
           <div>
             <span>47%&nbsp;</span>
-            <span className="grayText TextLine">16,900원</span>
+            <span className="grayText TextLine">
+              {formatPrice(calculateTotalPrice(price))}원
+            </span>
           </div>
           <div>
-            <span className="grayText boldText fontSize25">9,900원</span>
+            <span className="grayText boldText fontSize25">
+              {formatPrice(calculateTotalPrice(discountPrice))}원
+            </span>
             <span className="grayText">&nbsp;쿠팡판매가</span>
           </div>
           <div>
-            <span className="redText fontSize25 boldText">8,910원</span>
+            <span className="redText fontSize25 boldText">
+              {formatPrice(calculateTotalPrice(discountPrice - 990))}원
+            </span>
             <span className="redText">&nbsp;즉시할인가</span>
           </div>
         </div>
@@ -143,7 +169,10 @@ const RightCoupang = (props) => {
           </div>
           <div className="smallImagesBox">
             {Object.keys(productImages).map((image, index) => (
-              <div className={selectedImage === image ? "selected" : ""}>
+              <div
+                className={selectedImage === image ? "selected" : ""}
+                key={index}
+              >
                 <img
                   src={image}
                   key={index}
@@ -166,32 +195,45 @@ const RightCoupang = (props) => {
             <span>쿠팡캐시 적립</span>
             <span>· 쿠페이 머니 결제시&nbsp;</span>
           </div>
-          <div>
+          <div
+            onClick={() => {
+              notification.warning({
+                message: "준비중입니다!",
+              });
+            }}
+          >
             <span className="boldText blueText">
               혜택보기 <span className="arrow"> &gt; </span>
             </span>
           </div>
         </div>
-        <div class="paymentText">
+        <div className="paymentText">
           <span className="boldText">PC에서도 간편한 결제&nbsp;</span>
           <img src="/img/coumoney.png" alt="coumoney" />
-          <span>쿠페이머니&nbsp;</span>{" "}
+          <span>&nbsp;쿠페이머니&nbsp;</span>{" "}
           <img src="/img/coucard.png" alt="coucard" />
-          <span>카드&nbsp;</span> <img src="/img/coucard2.png" alt="coucount" />
-          <span>계좌이체</span>
+          <span>&nbsp;카드&nbsp;</span>{" "}
+          <img src="/img/coucard2.png" alt="coucount" />
+          <span>&nbsp;계좌이체</span>
         </div>
-        <div class="inputs">
+        <div className="inputs">
           <InputNumber
             min={1}
             max={10}
             defaultValue={1}
             className="custom-Input"
+            onChange={handleQuantity}
           />
 
-          <Button type="primary" ghost className="custom-button">
+          <Button
+            type="primary"
+            ghost
+            className="custom-button"
+            htmlType="submit"
+          >
             장바구니 담기
           </Button>
-          <Button type="primary" className="custom-button">
+          <Button type="primary" className="custom-button" htmlType="submit">
             바로 구매 &gt;
           </Button>
         </div>

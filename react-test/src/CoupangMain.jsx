@@ -19,7 +19,9 @@ const CoupangMain = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [showProduct, setShowProduct] = useState([]);
   const [selectedImage, setSelectedImage] = useState("");
-
+  const [price, setPrice] = useState(16900);
+  const [discountPrice, setDiscountPrice] = useState(9900);
+  const [quantity, setQuantity] = useState(1);
   return (
     <div className="allWrap">
       <div className="topWrap">
@@ -29,6 +31,12 @@ const CoupangMain = () => {
           setMainImage={setMainImage}
         />
         <RightCoupang
+          quantity={quantity}
+          setQuantity={setQuantity}
+          price={price}
+          setPrice={setPrice}
+          discountPrice={discountPrice}
+          setDiscountPrice={setDiscountPrice}
           setSelectImage={setSelectImage}
           setMainImage={setMainImage}
           productName={productName}

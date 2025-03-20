@@ -63,17 +63,21 @@ const RightCoupang = (props) => {
     { value: 3, label: "230-235mm(38-39)" },
     { value: 4, label: "260-270mm(44-45)" },
   ];
+
+  // 클릭 시 왼쪽 창 이미지 변경
   const handleClick = (image) => {
     const newImages = productImages[image] || [];
     setSelectImage(newImages);
     setSelectedImage(image);
   };
 
+  // 호버 시 메인 이미지 변경
   const handleHover = (image) => {
     setMainImage(image);
     setProductName(productNames[image] || []);
   };
 
+  // 폼 제출 시
   const cartFormik = useFormik({
     initialValues: {
       size: "",
@@ -89,6 +93,7 @@ const RightCoupang = (props) => {
     },
   });
 
+  // 가격 구분 기호
   const formatPrice = (price) => {
     return price.toLocaleString();
   };

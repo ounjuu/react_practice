@@ -1,8 +1,7 @@
 import "./LeftCoupang.css";
 import React from "react";
-// import apple from "./img/apple.jpg";
-// import apple2 from "./img/apple2.jpg";
-// import apple3 from "./img/apple3.jpg";
+import ImageList from "./ImageList";
+import MainImage from "./MainImage";
 
 const LeftCoupang = (props) => {
   const { selectImage, mainImage, setMainImage } = props;
@@ -12,20 +11,8 @@ const LeftCoupang = (props) => {
   };
   return (
     <div className="LeftBox">
-      <div className="lineImages">
-        {selectImage.map((image, index) => (
-          <img
-            src={image}
-            key={index}
-            alt={`product${index}`}
-            className="lineImg"
-            onMouseOver={() => handleImg(image)}
-          />
-        ))}
-      </div>
-      <div className="bigImage">
-        <img src={mainImage} alt="mainImage" className="leftMainImg" />
-      </div>
+      <MainImage mainImage={mainImage} />
+      <ImageList handleImg={handleImg} selectImage={selectImage} />
     </div>
   );
 };

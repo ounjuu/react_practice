@@ -8,13 +8,56 @@ h2 {
 }
 .smallImagesBox {
   display: flex;
-  overflow: hidden;
+  div {
+    width: 65px;
+    height: 65px;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-right: 10px;
+  }
 }
 
 .smallImagesBox img {
   width: 65px;
   height: 65px;
+
   object-fit: contain;
+  cursor: pointer;
 }
 
-/* 숫자 버튼 */
+/* 선택된 이미지 파란색 체크 추가 */
+.selected {
+  border: 2px solid rgb(48, 90, 255);
+  position: relative;
+}
+
+.selected::after {
+  content: "✔";
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  padding: 0px 3px;
+  font-size: 10px;
+  background-color: rgb(48, 90, 255);
+  color: white;
+}
+
+/* 글씨들 */
+.blueText {
+  color: rgb(48, 90, 255);
+}
+
+.fontSize12 {
+  font-size: 12px;
+}
+
+.fontSize15 {
+  font-size: 15px;
+}
+
+/* 선 */
+.priceTitle {
+  border-top: 1px solid rgb(172, 172, 172);
+  border-bottom: 1px solid rgb(172, 172, 172);
+  padding: 10px 0px;
+}

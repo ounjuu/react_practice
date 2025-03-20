@@ -18,11 +18,16 @@ const CoupangMain = () => {
   const [productOption, setProductOption] = useState("220-225mm(36-37)");
   const [currentPage, setCurrentPage] = useState(1);
   const [showProduct, setShowProduct] = useState([]);
+  const [selectedImage, setSelectedImage] = useState("");
 
   return (
     <div className="allWrap">
       <div className="topWrap">
-        <LeftCoupang selectImage={selectImage} mainImage={mainImage} />
+        <LeftCoupang
+          selectImage={selectImage}
+          mainImage={mainImage}
+          setMainImage={setMainImage}
+        />
         <RightCoupang
           setSelectImage={setSelectImage}
           setMainImage={setMainImage}
@@ -30,6 +35,8 @@ const CoupangMain = () => {
           setProductName={setProductName}
           productOption={productOption}
           setProductOption={setProductOption}
+          selectedImage={selectedImage}
+          setSelectedImage={setSelectedImage}
         />
       </div>
 

@@ -273,7 +273,8 @@ const BottomCoupang = (props) => {
         </div>
         <div className="todayPricePage">
           <span>
-            <span>{currentPage}</span> <span>/ {showProduct.length}</span>
+            <span className="todayPriceCurPage">{currentPage}</span>{" "}
+            <span className="todayPriceTotalPage">/ {showProduct.length}</span>
           </span>
         </div>
       </div>
@@ -284,21 +285,37 @@ const BottomCoupang = (props) => {
               {productGroup.map((product) => (
                 <div key={product.id} className="ratioFive">
                   <img src={product.image} alt={product.name} />
-                  <div>{product.name}</div>
-                  <div>
-                    <span>{product.discountType}</span>
-                    <span>{product.discountRate}</span>
-                    <span>{product.originalPrice}</span>
+                  <div className="onSaleText">
+                    <span>특가진행중</span>
                   </div>
-                  <div>{product.discountedPrice}</div>
-                  <div>{product.delivery}</div>
-                  <div>{product.shipping}</div>
+                  <div className="productNameText">{product.name}</div>
+                  <div className="discountText">
+                    <span className="discountTextRed">
+                      {product.discountType}
+                    </span>
+                    <span className="discountTextgray1">
+                      {product.discountRate}
+                    </span>
+                    <span className="discountTextgray2">
+                      {product.originalPrice}
+                    </span>
+                  </div>
+                  <div className="discountTextPrice">
+                    {product.discountedPrice}
+                  </div>
+                  <div className="grayText">{product.delivery}</div>
+                  <div className="grayText">{product.shipping}</div>
                   <div>
-                    <Rate />
-                    <span>{product.reviews}</span>
+                    <Rate defaultValue={4.5} allowHalf />
+                    &nbsp;
+                    <span className="grayText fontSize12">
+                      {product.reviews}
+                    </span>
                   </div>
                   <div>
-                    <span>{product.stockRemaining}</span>
+                    <span className="grayText fontSize12 fontBold">
+                      {product.stockRemaining}
+                    </span>
                   </div>
                 </div>
               ))}

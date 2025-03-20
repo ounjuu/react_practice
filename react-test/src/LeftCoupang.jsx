@@ -5,7 +5,11 @@ import React from "react";
 // import apple3 from "./img/apple3.jpg";
 
 const LeftCoupang = (props) => {
-  const { selectImage, mainImage } = props;
+  const { selectImage, mainImage, setMainImage } = props;
+
+  const handleImg = (image) => {
+    setMainImage(image);
+  };
   return (
     <div className="LeftBox">
       <div className="lineImages">
@@ -15,6 +19,7 @@ const LeftCoupang = (props) => {
             key={index}
             alt={`product${index}`}
             className="lineImg"
+            onMouseOver={() => handleImg(image)}
           />
         ))}
       </div>

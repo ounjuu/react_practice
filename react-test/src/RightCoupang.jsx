@@ -6,7 +6,14 @@ import { notification } from "antd";
 // 오른쪽 쿠팡
 
 const RightCoupang = (props) => {
-  const { setSelectImage, setMainImage, productName, setProductName } = props;
+  const {
+    setSelectImage,
+    setMainImage,
+    productName,
+    setProductName,
+    selectedImage,
+    setSelectedImage,
+  } = props;
   const productImages = {
     "/img/gray1.jpg": [
       "/img/gray1.jpg",
@@ -53,6 +60,7 @@ const RightCoupang = (props) => {
   const handleClick = (image) => {
     const newImages = productImages[image] || [];
     setSelectImage(newImages);
+    setSelectedImage(image);
   };
 
   const handleHover = (image) => {
@@ -75,14 +83,14 @@ const RightCoupang = (props) => {
     },
   });
   return (
-    <div className="RightBox">
+    <div className="RightBox fontSize15">
       <form onSubmit={cartFormik.handleSubmit}>
-        <div>곰돌이샵</div>
+        <div className="blueText">곰돌이샵</div>
         <div className="productTitle">
           <h2>
             곰돌이샵 말랑말랑 귀여운 몽실 토끼 EVA 슬리퍼 발편한 쿠션 실내화
           </h2>
-          <span>
+          <span className="blueText">
             <Rate defaultValue={4.5} allowHalf />
             510개 상품평
           </span>
@@ -121,17 +129,19 @@ const RightCoupang = (props) => {
           </div>
           <div className="smallImagesBox">
             {Object.keys(productImages).map((image, index) => (
-              <img
-                src={image}
-                key={index}
-                alt={`product${index}`}
-                onClick={() => {
-                  handleClick(image);
-                }}
-                onMouseOver={() => {
-                  handleHover(image);
-                }}
-              />
+              <div className={selectedImage === image ? "selected" : ""}>
+                <img
+                  src={image}
+                  key={index}
+                  alt={`product${index}`}
+                  onClick={() => {
+                    handleClick(image);
+                  }}
+                  onMouseOver={() => {
+                    handleHover(image);
+                  }}
+                />
+              </div>
             ))}
           </div>
         </div>

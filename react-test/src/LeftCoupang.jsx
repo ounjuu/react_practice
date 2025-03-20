@@ -11,8 +11,8 @@ const LeftCoupang = (props) => {
   };
   return (
     <div className="LeftBox">
-      <MainImage mainImage={mainImage} />
       <ImageList handleImg={handleImg} selectImage={selectImage} />
+      <MainImage mainImage={mainImage} />
     </div>
   );
 };

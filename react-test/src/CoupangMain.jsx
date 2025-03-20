@@ -16,6 +16,8 @@ const CoupangMain = () => {
   const [mainImage, setMainImage] = useState("/img/gray1.jpg");
   const [productName, setProductName] = useState("그레이");
   const [productOption, setProductOption] = useState("220-225mm(36-37)");
+  const [currentPage, setCurrentPage] = useState(1);
+  const [showProduct, setShowProduct] = useState([]);
 
   return (
     <div className="allWrap">
@@ -32,7 +34,12 @@ const CoupangMain = () => {
       </div>
 
       <div className="bottomWrap">
-        <BottomCoupang />
+        <BottomCoupang
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
+          showProduct={showProduct}
+          setShowProduct={setShowProduct}
+        />
       </div>
     </div>
   );

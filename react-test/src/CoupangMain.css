@@ -6,3 +6,28 @@
   display: flex;
   justify-content: space-between;
 }
+
+/* 모바일 화면 크기 */
+@media (max-width: 768px) {
+  .allWrap {
+    padding: 20px 10px;
+  }
+
+  .topWrap {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* 작은 화면 크기 (예: 480px 이하) */
+@media (max-width: 480px) {
+  .allWrap {
+    padding: 15px 5px;
+  }
+
+  .topWrap {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}

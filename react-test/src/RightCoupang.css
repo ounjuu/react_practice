@@ -143,3 +143,59 @@ h2 {
   padding: 5.5px 0px;
   font-weight: bold;
 }
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .RightBox {
+    width: 95%;
+    padding-right: 0;
+    padding-top: 15px;
+  }
+
+  .smallImagesBox {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .smallImagesBox div {
+    width: 50px;
+    height: 50px;
+    margin-right: 8px;
+  }
+
+  .smallImagesBox img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .custom-button {
+    width: 48%;
+    margin-left: 10px;
+  }
+
+  .custom-Input {
+    width: 20%;
+  }
+}
+
+/* 더 작은 화면 크기 (480px 이하) */
+@media (max-width: 480px) {
+  .smallImagesBox div {
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+  }
+
+  .smallImagesBox img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .custom-button {
+    width: 45%;
+  }
+
+  .custom-Input {
+    width: 25%;
+  }
+}

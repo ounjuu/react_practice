@@ -196,3 +196,82 @@
 .slick-next {
   right: 10px;
 }
+
+/* 반응형 디자인 */
+@media (max-width: 1200px) {
+  .gridFive {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .ant-carousel .slick-prev,
+  .ant-carousel .slick-next {
+    padding: 12px 8px;
+  }
+  .todayPricePage {
+    padding-top: 5px;
+  }
+}
+
+@media (max-width: 992px) {
+  .gridFive {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .ant-carousel .slick-prev,
+  .ant-carousel .slick-next {
+    padding: 10px 6px;
+  }
+
+  .productNameText {
+    font-size: 11px;
+  }
+
+  .todayPrice {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gridFive {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .ant-carousel .slick-prev,
+  .ant-carousel .slick-next {
+    padding: 10px 6px;
+  }
+
+  .productNameText {
+    font-size: 10px;
+  }
+
+  .todayPrice {
+    font-size: 20px;
+  }
+
+  .todayPrices {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .gridFive {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .productNameText {
+    font-size: 9px;
+  }
+
+  .todayPrice {
+    font-size: 18px;
+  }
+
+  .slick-prev,
+  .slick-next {
+    display: none;
+  }
+}

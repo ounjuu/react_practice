@@ -6,7 +6,6 @@
   width: 20%;
   display: flex;
   flex-direction: column;
-  /* align-items: end; */
   padding-left: 18px;
   box-sizing: border-box;
 }
@@ -24,4 +23,49 @@
   max-width: 85px;
   padding-bottom: 5px;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .LeftBox {
+    width: 100%;
+    flex-direction: row;
+    align-items: start;
+  }
+  .bigImage img {
+    width: 95%;
+    max-width: 550px;
+  }
+  .lineImages {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0px;
+
+    .bigImage {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .lineImages img {
+      max-width: 60px;
+      margin-right: 10px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .moneyTexts span {
+      font-size: 12px;
+    }
+    .paymentText span {
+      font-size: 12px;
+    }
+    .LeftBox {
+      width: 100%;
+    }
+
+    .lineImages img {
+      max-width: 50px;
+    }
+  }
 }

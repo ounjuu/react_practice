@@ -14,4 +14,8 @@
 </div>
 <br/>
 
+✔ **페이지** </br>
 ![coupang](https://github.com/user-attachments/assets/3820add3-f842-4e4d-ae5b-9912847472f6)
+
+✔ **반응형** </br>
+<img width="410" alt="image" src="https://github.com/user-attachments/assets/e37ec336-afec-4309-adb2-3534893cdf90" />
